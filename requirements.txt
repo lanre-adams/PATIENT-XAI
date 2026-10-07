@@ -1,0 +1,11 @@
+# Runtime (backend + ML). torch is installed from the CPU wheel index in Docker.
+numpy>=1.26,<3
+pandas>=2.1,<4
+scikit-learn>=1.4,<2
+torch>=2.2
+joblib>=1.3
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+sqlalchemy>=2.0
+reportlab>=4.0

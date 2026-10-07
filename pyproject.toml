@@ -1,0 +1,26 @@
+[project]
+name = "patient-xai"
+version = "0.1.0"
+description = "PATIENT-XAI: research demonstrator for trustworthy personalised longitudinal health-trajectory modelling on synthetic data (not a medical device)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Olanrewaju Adams Agunloye" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["ml", "backend", "."]
+testpaths = ["tests"]
+markers = [
+  "integration: exercises the HTTP API end to end",
+  "model: checks model behaviour and attribution properties",
+]
+filterwarnings = ["ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 145
+target-version = "py310"
+src = ["ml", "backend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["B008", "UP007"]

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you refer to this research demonstrator, please cite it as below."
+title: "PATIENT-XAI: a research demonstrator for trustworthy personalised longitudinal health-trajectory modelling on synthetic data"
+version: 0.1.0
+date-released: 2026-10-07
+license: MIT
+type: software
+authors:
+  - family-names: Agunloye
+    given-names: Olanrewaju Adams
+    # orcid: https://orcid.org/0000-0000-0000-0000   # [VERIFY/ADD EVIDENCE] add ORCID if you have one
+repository-code: "https://github.com/[YOUR-GITHUB-USERNAME]/patient-xai"
+keywords: [longitudinal machine learning, explainable AI, counterfactual, uncertainty, digital twin, synthetic data]
+abstract: >-
+  Pre-application research demonstrator. Not a medical device. Trains a discrete-time survival
+  logistic baseline and a GRU deep ensemble on a synthetic longitudinal cohort with a known
+  data-generating process, and audits model-based counterfactual simulations against
+  simulator ground truth.

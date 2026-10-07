@@ -1,0 +1,28 @@
+# PATIENT-XAI — research demonstrator, synthetic data only, not a medical device.
+#   docker compose up --build
+#   Frontend  http://localhost:3000
+#   API       http://localhost:8000      API docs  http://localhost:8000/docs
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        PIPELINE_ARGS: ${PIPELINE_ARGS:-}
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
