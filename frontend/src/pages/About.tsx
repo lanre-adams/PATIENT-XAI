@@ -66,7 +66,7 @@ export function About() {
       <p>These are the kinds of failure a personalised digital-twin approach must detect and address before any clinical use.</p>
       <h2>Author</h2>
       <p>Built by Olanrewaju (Lanre) Adams Agunloye as preparation for doctoral research in Artificial Medical
-        Intelligence. Code is MIT-licensed. Written with AI assistance (disclosed in the repository README).</p>
+        Intelligence.</p>
     </article>
   );
 }
